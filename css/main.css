@@ -1,6 +1,6 @@
 /* FONT FAMILY */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -39,8 +39,8 @@ a:any-link {
 :root {
   --BGCOLOR: #383636;
   --FONTCOLOR: whitesmoke;
-  --PRIMARY_FONT: "Roboto Slab";
-  --DESCRIPTION_FONT: "Playfair Display";
+  --DESCRIPTION_FONT: "Poppins";
+  --PRIMARY_FONT: "Playfair Display";
 }
 
 /* GENERAL STYLES */
@@ -54,36 +54,28 @@ body {
 button {
   height: 45px;
   width: 150px;
-  border: 1px solid var(--FONTCOLOR);
   color: var(--FONTCOLOR);
   font-family: var(--DESCRIPTION_FONT);
-  border-radius: 3px;
   font-size: 1rem;
   position: relative;
-  overflow: hidden;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
-}
-
-button:hover {
-  color: var(--BGCOLOR);
+  font-weight: 300;
 }
 
 button::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: -15px;
-  height: 100%;
-  transform: skewX(-30deg);
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background: var(--FONTCOLOR);
-  width: 0;
-  transition: all 0.5s ease;
-  z-index: -1;
+  height: 0.2px;
+  transition: all 0.3s ease;
 }
 
 button:hover::after {
-  width: 130%;
+  transform: scaleX(0.8);
 }
 
 .topic {
@@ -118,7 +110,7 @@ header.scroll {
 header h1 a:any-link {
   font-family: var(--PRIMARY_FONT);
   font-weight: 100;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .nav_elements {
@@ -147,7 +139,7 @@ header h1 a:any-link {
 }
 
 .nav_elements li a:any-link {
-  font-family: var(--DESCRIPTION_FONT);
+  font-family: var(--PRIMARY_FONT);
 }
 
 /* HEADER RESPONSIVE DESIGN */
