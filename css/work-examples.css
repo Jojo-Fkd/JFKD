@@ -1,6 +1,9 @@
 #work-examples {
   min-height: 100vh;
   padding: 1rem;
+  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .example_container {
@@ -22,25 +25,31 @@
   width: 30vw;
   display: grid;
   gap: 1rem;
-  place-content: center;
+  place-items: center;
   padding: 1rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
 }
 
 .example img {
   width: 100%;
+  border-radius: 3px;
 }
 
-.example_nav {
-  display: flex;
-  justify-content: space-evenly;
+.example p {
+  font-family: var(--PRIMARY_FONT);
+  font-weight: 300;
+  text-align: center;
   color: var(--FONTCOLOR);
 }
 
-.example_nav h3 {
-  font-family: var(--DESCRIPTION_FONT);
-  font-weight: 300;
+.example button {
+  height: 35px;
+  width: 130px;
+  font-size: 0.8rem;
+  background: var(--FONTCOLOR);
+  color: var(--BGCOLOR);
 }
 
 /* RESPONSIVE DESIGN */
