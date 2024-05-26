@@ -1,54 +1,11 @@
 #contact {
   display: flex;
+  gap: 2rem;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   padding: 1rem;
-}
-
-/* _CONTACT INFORMATION_ */
-
-#contact_information {
-  width: 60vw;
-  align-self: flex-start;
-}
-
-#contact span {
-  color: var(--FONTCOLOR);
-  font-family: var(--DESCRIPTION_FONT);
-  opacity: 0.7;
-}
-
-.contacts article {
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.contacts article:first-child {
-  margin-top: 2rem;
-}
-
-.contacts article .label {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  opacity: 1 !important;
-  font-family: var(--PRIMARY_FONT) !important;
-  font-weight: 300;
-}
-
-.contacts article .info {
-  color: var(--FONTCOLOR);
-  font-family: var(--DESCRIPTION_FONT);
-  margin: 0 3rem;
-  padding-left: 1rem;
-  width: 300px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+  background: #464646;
 }
 
 /* _CONTACT_FORM_ */
@@ -74,6 +31,11 @@
   flex-direction: column;
 }
 
+.contact-form form section {
+  display: flex;
+  gap: 2rem;
+}
+
 .contact-form form label input,
 .contact-form form label textarea {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -81,18 +43,26 @@
   width: 300px;
   color: var(--FONTCOLOR);
   font-family: var(--DESCRIPTION_FONT);
+  font-weight: 200;
+  transition: all 0.3s ease;
+  outline: 1px solid transparent;
+  padding-left: 1rem;
+}
+
+.contact-form form label input:focus,
+.contact-form form label textarea:focus {
+  outline: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .contact-form form label input {
   height: 40px;
   width: 300px;
-  padding-left: 0.5rem;
-  font-family: var(--DESCRIPTION_FONT);
 }
 
 .contact-form form label textarea {
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   font-family: var(--DESCRIPTION_FONT);
+  width: 100%;
 }
 
 ::placeholder {
@@ -101,6 +71,11 @@
 
 .contact-form form button {
   width: 120px;
+  background: var(--FONTCOLOR);
+  color: var(--BGCOLOR);
+  font-weight: 800;
+  font-family: var(--PRIMARY_FONT);
+  text-transform: uppercase;
 }
 
 /* RESPONSIVE DESIGN */

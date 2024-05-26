@@ -1,10 +1,16 @@
-/* FAQ SECTION FUNCTIONALITY */
+/* ON SCROLL EFFECTS */
 
-const caretBtns = document.querySelectorAll(".faq_caret");
+const entries = document.querySelectorAll(".hidden");
 
-caretBtns.forEach((caret) => {
-  caret.onclick = () => {
-    const faqArticle = caret.parentElement.parentElement;
-    faqArticle.classList.toggle("answer");
-  };
+const obserever = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
 });
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => obserever.observe(el));

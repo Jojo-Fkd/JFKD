@@ -61,16 +61,34 @@ button {
   transition: all 0.3s ease;
   cursor: pointer;
   font-weight: 300;
-  border: 1px solid white;
+  border: 1px solid var(--FONTCOLOR);
   border-radius: 3px;
+  display: grid;
+  place-content: center;
+}
+
+.main {
+  display: grid;
+  place-items: center;
 }
 
 .topic {
   font-family: var(--PRIMARY_FONT);
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 300;
   color: var(--FONTCOLOR);
   margin-bottom: 1rem;
+  text-align: center;
+}
+
+q {
+  display: block;
+  width: 70vw;
+  color: var(--FONTCOLOR);
+  font-family: var(--DESCRIPTION_FONT);
+  font-weight: 200;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 /* HEADER */
@@ -85,12 +103,12 @@ header {
   color: var(--FONTCOLOR);
   position: fixed;
   z-index: 100;
-  height: 70px;
+  height: 80px;
   transition: all 0.3s ease;
 }
 
 header.scroll {
-  height: 60px;
+  height: 70px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -201,7 +219,7 @@ footer {
   gap: 2rem;
   flex-direction: column;
   color: var(--FONTCOLOR);
-  transform: translateY(100%);
+  background: #464646;
 }
 
 .footer_content {

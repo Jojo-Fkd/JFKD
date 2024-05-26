@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JFKD - Jonathan Fekadu</title>
+    <title>JFKD Website Design</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/landing.css" />
     <link rel="stylesheet" href="css/work-examples.css" />
     <link rel="stylesheet" href="css/contact.css" />
-    <script defer src="js/main.js"></script>
     <script defer src="js/landing.js"></script>
     <script defer src="js/work-examples.js"></script>
     <meta name="autor" content="JFKD" />
@@ -21,9 +20,9 @@
       <h1><a href="#introduction">JFKD</a></h1>
       <nav>
         <ul class="nav_elements">
-          <li><a href="#services">Services</a></li>
           <li><a href="#work-examples">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="">Chat With Us</a></li>
         </ul>
       </nav>
     </header>
@@ -33,26 +32,101 @@
         <article class="name">
           <ul>
             <li>Website Solutions For Your Business</li>
-            <li>Skyrockets Your Business into the future</li>
+            <li>JFKD Web Design & Development</li>
           </ul>
-          <p>Request Consultation With Our Dev To Get Started</p>
-          <a href="#contact">
-            <button class="main_btn">Request</button>
-          </a>
+          <p>Book a Call With Our Dev To Get Started</p>
+          <div class="intro-btns">
+            <button class="main_btn">Chat With Us</button>
+            <button class="portfolio-btn">
+              <a href="#portfolio">Portfolio</a>
+            </button>
+          </div>
+          <img class="bg-circles-1" src="images/bg-circles.png" alt="" />
+          <img class="bg-circles-2" src="images/bg-circles.png" alt="" />
+          <img class="bg-circles-3" src="images/bg-circles.png" alt="" />
         </article>
+      </section>
+
+      <!-- _ABOUT_ -->
+
+      <section id="about">
+        <img class="about-bg-1" src="images/secondary-bg-circles.png" alt="" />
+        <img class="about-bg-2" src="images/secondary-bg-circles.png" alt="" />
+        <figure>
+          <figcaption class="hidden">
+            <ul>
+              <li>Web <span>Design</span></li>
+              <li><span>Web</span> Development</li>
+              <li>Web Re-<span>Design</span></li>
+            </ul>
+            <p>
+              Quality Over Quantity <span></span> Full Client Satisfaction
+              <span></span> Straightforward Consultation
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- PORTFOLIO -->
+
+      <section id="work-examples">
+        <div class="blur"></div>
+        <h1>Our Works</h1>
+        <section class="example_container">
+          <section>
+            <article class="example hidden first">
+              <img src="images/wime-image.PNG" alt="" />
+              <p>Women In MICE Ethiopia</p>
+              <button>Go To Website</button>
+            </article>
+            <article class="example hidden second">
+              <img src="images/bro-image.PNG" alt="" />
+              <p>Bright Events Organization</p>
+              <button>Go To Website</button>
+            </article>
+            <article class="example hidden third">
+              <img src="images/rfa-image.PNG" alt="" />
+              <p>RaphaellaFkdArt</p>
+              <button>Go To Website</button>
+            </article>
+          </section>
+        </section>
+      </section>
+
+      <section id="about" class="second">
+        <img class="about-bg-1" src="images/secondary-bg-circles.png" alt="" />
+        <figure>
+          <figcaption class="hidden">
+            <ul>
+              <li>Capturing <span>Feelings</span></li>
+              <li><span>Dilligent</span> Understanding</li>
+              <li>100% <span>Satisfaction</span></li>
+            </ul>
+            <p>
+              We Consult <span></span> We Communicate <span></span> We Deliver
+            </p>
+          </figcaption>
+        </figure>
       </section>
 
       <!-- _SERVICES_ -->
 
-      <section id="services">
+      <section id="services" class="hidden">
+        <img
+          class="service-bg-image-1"
+          src="images/secondary-bg-circles.png"
+          alt=""
+        />
+        <img
+          class="service-bg-image-2"
+          src="images/secondary-bg-circles.png"
+          alt=""
+        />
         <article class="main">
           <h1 class="topic">-- Services --</h1>
-          <p>
-            We offer services take the weight of website development, design or
-            SEO off our client's shoulders. We will take you through a simple
-            process of consultation and conclusions to take you forward with
-            your business.
-          </p>
+          <q>
+            We tailor different aspects of our services according to your needs.
+          </q>
         </article>
         <section class="services">
           <article class="card">
@@ -80,7 +154,6 @@
               We will design a website design capturing the essence business,
               then build it into your dream website.
             </p>
-            <button>Order</button>
           </article>
           <article class="card re-design">
             <h2>
@@ -100,152 +173,24 @@
               We can re-design website you are not satisified with so it can
               meet your expectations.
             </p>
-            <button>Order</button>
           </article>
-          <article class="card">
-            <h2>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 512">
-                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                <path
-                  d="M220.6 130.3l-67.2 28.2V43.2L98.7 233.5l54.7-24.2v130.3l67.2-209.3zm-83.2-96.7l-1.3 4.7-15.2 52.9C80.6 106.7 52 145.8 52 191.5c0 52.3 34.3 95.9 83.4 105.5v53.6C57.5 340.1 0 272.4 0 191.6c0-80.5 59.8-147.2 137.4-158zm311.4 447.2c-11.2 11.2-23.1 12.3-28.6 10.5-5.4-1.8-27.1-19.9-60.4-44.4-33.3-24.6-33.6-35.7-43-56.7-9.4-20.9-30.4-42.6-57.5-52.4l-9.7-14.7c-24.7 16.9-53 26.9-81.3 28.7l2.1-6.6 15.9-49.5c46.5-11.9 80.9-54 80.9-104.2 0-54.5-38.4-102.1-96-107.1V32.3C254.4 37.4 320 106.8 320 191.6c0 33.6-11.2 64.7-29 90.4l14.6 9.6c9.8 27.1 31.5 48 52.4 57.4s32.2 9.7 56.8 43c24.6 33.2 42.7 54.9 44.5 60.3s.7 17.3-10.5 28.5zm-9.9-17.9c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8 8-3.6 8-8z"
-                />
-              </svg>
-            </h2>
-            <h3>
-              SEO
-              <span class="styler"></span>
-            </h3>
-            <p>
-              Websites built by JFKD will come with SEO optimization that will
-              make your website rank top in searches
-            </p>
-            <button>Order</button>
-          </article>
-        </section>
-      </section>
 
-      <!-- PORTFOLIO -->
-
-      <section id="work-examples">
-        <div class="main">
-          <h1 class="topic">-- Portfolio --</h1>
-          <p>
-            Explore our works, these projects are a glimpse of what you can get
-            as a client.
-          </p>
-        </div>
-        <section class="example_container">
-          <section>
-            <article class="example">
-              <img src="images/wime-image.PNG" alt="" />
-              <p>Women In MICE Ethiopia</p>
-              <button>Go To Website</button>
-            </article>
-            <article class="example">
-              <img src="images/bro-image.PNG" alt="" />
-              <p>Bright Events Organization</p>
-              <button>Go To Website</button>
-            </article>
-            <article class="example">
-              <img src="images/rfa-image.PNG" alt="" />
-              <p>RaphaellaFkdArt</p>
-              <button>Go To Website</button>
-            </article>
+          <section class="service-list">
+            <ul>
+              <li>Client Consulation</li>
+              <li>Web Design</li>
+              <li>Web Development</li>
+              <li>Web Maintenance</li>
+              <li>SEO Optimization</li>
+              <li>Administration</li>
+            </ul>
           </section>
         </section>
-      </section>
-
-      <!-- CONTACT -->
-
-      <section id="contact">
-        <section id="contact_information">
-          <h1 class="topic">-- Contact Us --</h1>
-          <span
-            >Contact Information is listed below, you can also directly contact
-            us by filling out the form.</span
-          >
-          <section class="contacts">
-            <article>
-              <span class="label">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 24 24"
-                  style="fill: var(--FONTCOLOR)"
-                >
-                  <path
-                    d="M16.57 22a2 2 0 0 0 1.43-.59l2.71-2.71a1 1 0 0 0 0-1.41l-4-4a1 1 0 0 0-1.41 0l-1.6 1.59a7.55 7.55 0 0 1-3-1.59 7.62 7.62 0 0 1-1.59-3l1.59-1.6a1 1 0 0 0 0-1.41l-4-4a1 1 0 0 0-1.41 0L2.59 6A2 2 0 0 0 2 7.43 15.28 15.28 0 0 0 6.3 17.7 15.28 15.28 0 0 0 16.57 22zM6 5.41 8.59 8 7.3 9.29a1 1 0 0 0-.3.91 10.12 10.12 0 0 0 2.3 4.5 10.08 10.08 0 0 0 4.5 2.3 1 1 0 0 0 .91-.27L16 15.41 18.59 18l-2 2a13.28 13.28 0 0 1-8.87-3.71A13.28 13.28 0 0 1 4 7.41zM20 11h2a8.81 8.81 0 0 0-9-9v2a6.77 6.77 0 0 1 7 7z"
-                  ></path>
-                  <path d="M13 8c2.1 0 3 .9 3 3h2c0-3.22-1.78-5-5-5z"></path>
-                </svg>
-                Phone Number
-              </span>
-              <div class="info">+25178080244</div>
-            </article>
-            <article>
-              <span class="label">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 24 24"
-                  style="fill: var(--FONTCOLOR)"
-                >
-                  <path
-                    d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"
-                  ></path>
-                </svg>
-                Email Address
-              </span>
-              <div class="info">jonathanfekadu1@gmail.com</div>
-            </article>
-          </section>
-        </section>
-        <section class="contact-form">
-          <h2>Direct Email</h2>
-          <form action="">
-            <label for="name">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Full Name"
-                autofocus="on"
-                required
-              />
-            </label>
-            <label for="email">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your Email Address"
-                required
-              />
-            </label>
-            <label for="reason">
-              <input
-                type="text"
-                id="reason"
-                name="reason"
-                placeholder="Reason to get in contact"
-                required
-              />
-            </label>
-            <label for="message">
-              <textarea
-                placeholder="Get in touch with your first message"
-                name="message"
-                id="message"
-                cols="30"
-                rows="5"
-                required
-              ></textarea>
-            </label>
-            <button>Send</button>
-          </form>
-        </section>
+        <article class="interest-cta">
+          <h3>"Chat now for an instant quote!"</h3>
+          <button>Chat With Us</button>
+          <img class="cta-bg" src="images/secondary-bg-circles.png" alt="" />
+        </article>
       </section>
     </main>
     <footer>
@@ -278,7 +223,7 @@
         </section>
       </section>
       <section class="footer_end">
-        <p>JFKD, 2023</p>
+        <p>JFKD, 2024</p>
       </section>
     </footer>
     <script>
