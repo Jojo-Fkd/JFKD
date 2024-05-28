@@ -34,8 +34,8 @@
           </svg>
         </div>
         <article>
-          <h3>Tell Us About Yourself</h3>
-          <p>We Will Be In Touch Through Your Email Inbox.</p>
+          <h3>Become A Client</h3>
+          <p>We Will Ensure You Get Swift Assistance From Us.</p>
         </article>
         <form action="">
           <div class="basic-info">
@@ -47,6 +47,7 @@
                 id="name-establishment"
                 name="name-establishment"
                 placeholder="John from AMCE."
+                autocomplete="off"
               />
             </label>
             <label for="email">
@@ -57,20 +58,23 @@
                 id="email"
                 name="email"
                 placeholder="john@amce.com"
+                autocomplete="off"
               />
             </label>
           </div>
-          <label for="request">
-            <div class="input-label">Tell Us A Bit About Your Project</div>
-            <textarea
-              name="request"
-              id="request"
-              rows="5"
-              placeholder="I Need A Great Website ..."
-              required
-            ></textarea>
-          </label>
-          <button>Submit Request</button>
+          <div class="website-type">
+            <div class="input-label">
+              What Kind Of Website Did You Come For?
+            </div>
+            <ul class="type-list">
+              <li>Business Website</li>
+              <li>Ecommerece Website</li>
+              <li class="chosen">Nonprofit Website</li>
+              <li>Portfolio Website</li>
+              <li>Other</li>
+            </ul>
+          </div>
+          <button disabled>Submit Request</button>
         </form>
       </section>
     </div>
@@ -99,9 +103,9 @@
           <p>Chat With Our Dev To Get Started</p>
           <div class="intro-btns">
             <button class="main_btn">Chat With Us</button>
-            <button class="portfolio-btn">
-              <a href="#work-examples">Portfolio</a>
-            </button>
+            <a href="#work-examples">
+              <button class="portfolio-btn">Portfolio</button>
+            </a>
           </div>
           <img class="bg-circles-1" src="images/bg-circles.png" alt="" />
           <img class="bg-circles-2" src="images/bg-circles.png" alt="" />
@@ -196,12 +200,7 @@
               <span style="display: none">wimethiopia.org.et</span>
               <button>View</button>
             </article>
-            <article class="example">
-              <img src="images/bro-image.PNG" alt="" />
-              <p>Bright Events Organization</p>
-              <span style="display: none">brightevents.com</span>
-              <button>View</button>
-            </article>
+
             <article class="example">
               <img src="images/rfa-image.PNG" alt="" />
               <p>RaphaellaFkdArt</p>

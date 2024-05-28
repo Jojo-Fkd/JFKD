@@ -30,4 +30,18 @@ becomeClientBtn.onclick = () => {
     popupContainer.classList.remove("active");
     body.classList.remove("hidden");
   };
+
+  // CLIENT HAS TO PICK WHAT TYPE OF WEBSITE THEY WANT
+
+  const options = popupContainer.querySelectorAll(
+    ".request .website-type .type-list li"
+  );
+  options.forEach((option) => {
+    option.onclick = () => {
+      options.forEach((option) => {
+        option.className = "";
+      });
+      option.className = "chosen";
+    };
+  });
 };

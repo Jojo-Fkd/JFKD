@@ -71,6 +71,10 @@ button {
   place-content: center;
 }
 
+button:disabled {
+  opacity: 0.5;
+}
+
 .main {
   display: grid;
   place-items: center;
@@ -174,7 +178,6 @@ q {
 .request input,
 .request textarea {
   border: 1px solid rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
   padding-left: 1rem;
   font-family: var(--PRIMARY_FONT);
@@ -192,16 +195,41 @@ q {
   height: 50px;
 }
 
-.request textarea {
-  width: 100%;
-  padding: 1rem;
-  resize: none;
+.type-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.type-list li {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  font-family: var(--DESCRIPTION_FONT);
+  font-size: 0.95rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.type-list li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--FONTCOLOR);
+}
+
+.type-list li.chosen {
+  background: var(--FONTCOLOR);
+  color: var(--BGCOLOR);
 }
 
 .request button {
   width: 100%;
   background: var(--FONTCOLOR);
   color: var(--BGCOLOR);
+  transition: all 0.3s ease;
 }
 
 /* HEADER */
