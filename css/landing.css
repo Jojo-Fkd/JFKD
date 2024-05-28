@@ -70,7 +70,7 @@
 
 .intro-btns .main_btn:hover {
   box-shadow: -8px 8px 0 white;
-  width: 160px;
+  transform: translateY(2px);
 }
 
 .portfolio-btn {
@@ -87,7 +87,11 @@
 }
 
 .portfolio-btn:hover {
-  transform: translateY(5px);
+  background: transparent;
+}
+
+.portfolio-btn:hover a:any-link {
+  color: var(--FONTCOLOR);
 }
 
 .bg-circles-1,
