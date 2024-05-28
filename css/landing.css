@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: center;
   height: 350px;
+  scroll-snap-align: start;
 }
 
 .name ul {
@@ -56,6 +57,7 @@
 .intro-btns {
   display: flex;
   gap: 2rem;
+  scroll-snap-align: start;
 }
 
 .intro-btns .main_btn {
@@ -63,33 +65,16 @@
   color: var(--FONTCOLOR);
   border: 1px solid white;
   transition: all 0.3s;
+  box-shadow: -5px 5px 0 white;
 }
 
 .intro-btns .main_btn:hover {
-  letter-spacing: 1px;
-  background: #5b5959;
-  border: 1px solid var(--BGCOLOR);
+  box-shadow: -8px 8px 0 white;
+  width: 160px;
 }
 
 .portfolio-btn {
-  position: relative;
-  overflow: show;
-}
-
-.portfolio-btn::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 0;
-  left: -5px;
-  top: 0;
-  background: var(--BGCOLOR);
-  transform: skew(-20deg);
-  transition: all 0.3s ease;
-}
-
-.portfolio-btn:hover::before {
-  width: 120%;
+  background: var(--FONTCOLOR);
 }
 
 .portfolio-btn a:any-link {
@@ -98,10 +83,11 @@
   transition: all 0.3s ease;
   font-family: var(--PRIMARY_FONT);
   font-size: 1.1rem;
+  color: var(--BGCOLOR);
 }
 
-.portfolio-btn:hover a:any-link {
-  letter-spacing: 1px;
+.portfolio-btn:hover {
+  transform: translateY(5px);
 }
 
 .bg-circles-1,
@@ -213,7 +199,7 @@
 
 #about figure figcaption ul li span {
   color: var(--BGCOLOR);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
   font-family: var(--DESCRIPTION_FONT);
 }
 

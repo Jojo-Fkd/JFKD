@@ -1,3 +1,117 @@
+#work-example-expanded {
+  z-index: -1;
+  background: var(--BGCOLOR);
+  height: 100vh;
+  width: 80%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+#work-example-expanded.expand {
+  z-index: 10;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.expanded-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.expanded-container .caret-right,
+.expanded-container .caret-left {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expanded-container .caret-left:hover {
+  transform: translateX(-10px);
+}
+
+.expanded-container .caret-right:hover {
+  transform: translateX(10px);
+}
+
+.expanded-container .caret-right svg {
+  transform: rotate(180deg);
+}
+
+.expanded-container figure {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.expanded-container figure img {
+  width: 600px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+}
+
+.expanded-container figure figcaption {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.expanded-container figure figcaption p {
+  color: var(--FONTCOLOR);
+  font-family: var(--PRIMARY_FONT);
+  font-size: 1.5rem;
+}
+
+.expanded-container figure figcaption button {
+  background: var(--FONTCOLOR);
+  color: var(--BGCOLOR);
+  text-transform: uppercase;
+  width: 130px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.expanded-container figure figcaption button:hover {
+  background: transparent;
+  color: var(--FONTCOLOR);
+}
+
+.work-example-blur {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.7s ease;
+  backdrop-filter: brightness(50%);
+}
+
+.work-example-blur.blur {
+  opacity: 1;
+  z-index: 10;
+}
+
+#work-example-expanded .close-btn {
+  position: sticky;
+  top: 0;
+  padding-top: 5rem;
+  padding-left: 1rem;
+}
+
+#work-example-expanded .close-btn svg {
+  cursor: pointer;
+}
+
 #work-examples {
   min-height: 100vh;
   padding: 1rem;
@@ -39,16 +153,14 @@
 }
 
 .example_container section {
-  display: flex;
+  display: grid;
   gap: 2rem;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-content: space-evenly;
   width: 100%;
 }
 
 .example {
-  width: 30vw;
   background: #686666;
   display: grid;
   gap: 1rem;
@@ -58,54 +170,6 @@
   border-radius: 10px;
   border: 2px solid transparent;
   transition: all 0.3s ease;
-}
-
-.first.show {
-  animation: fade-in-example1 1s ease;
-}
-
-@keyframes fade-in-example1 {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.second.show {
-  animation: fade-in-example2 1s ease;
-}
-
-@keyframes fade-in-example2 {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.third.show {
-  animation: fade-in-example3 1s ease;
-}
-
-@keyframes fade-in-example3 {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .example img {
@@ -118,15 +182,25 @@
   font-weight: 300;
   text-align: center;
   color: white;
+  font-size: 1.5rem;
 }
 
 .example button {
   height: 35px;
-  width: 130px;
+  width: 120px;
   font-size: 0.8rem;
-  background: var(--FONTCOLOR);
-  color: var(--BGCOLOR);
-  border: 1px solid black;
+  background: var(--BGCOLOR);
+  color: var(--FONTCOLOR);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: -3px 3px 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.example button:hover {
+  box-shadow: -5px 5px 0 rgba(255, 255, 255, 0.8);
+  width: 130px;
 }
 
 /* RESPONSIVE DESIGN */

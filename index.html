@@ -14,6 +14,67 @@
     <meta name="description" content="JFKD - Portfolio Website" />
   </head>
   <body>
+    <!-- REQUEST TO BECOME A CLIENT -->
+
+    <div class="popup-container">
+      <section class="request">
+        <div class="close-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20px"
+            height="20px"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="var(--BGCOLOR)"
+              stroke-width="2"
+              d="m3 3l18 18M3 21L21 3"
+            />
+          </svg>
+        </div>
+        <article>
+          <h3>Tell Us About Yourself</h3>
+          <p>We Will Be In Touch Through Your Email Inbox.</p>
+        </article>
+        <form action="">
+          <div class="basic-info">
+            <label for="name-establishment">
+              <div class="input-label">Name & Establishment</div>
+              <input
+                type="text"
+                required
+                id="name-establishment"
+                name="name-establishment"
+                placeholder="John from AMCE."
+              />
+            </label>
+            <label for="email">
+              <div class="input-label">Email Address</div>
+              <input
+                type="email"
+                required
+                id="email"
+                name="email"
+                placeholder="john@amce.com"
+              />
+            </label>
+          </div>
+          <label for="request">
+            <div class="input-label">Tell Us A Bit About Your Project</div>
+            <textarea
+              name="request"
+              id="request"
+              rows="5"
+              placeholder="I Need A Great Website ..."
+              required
+            ></textarea>
+          </label>
+          <button>Submit Request</button>
+        </form>
+      </section>
+    </div>
+
     <!-- NAVIGATION -->
 
     <header>
@@ -24,6 +85,7 @@
           <li><a href="#services">Our Services</a></li>
           <li><a href="">Chat With Us</a></li>
         </ul>
+        <button>Become A Client +</button>
       </nav>
     </header>
     <main>
@@ -34,7 +96,7 @@
             <li>Website Solutions For Your Business</li>
             <li>JFKD Web Design & Development</li>
           </ul>
-          <p>Book a Call With Our Dev To Get Started</p>
+          <p>Chat With Our Dev To Get Started</p>
           <div class="intro-btns">
             <button class="main_btn">Chat With Us</button>
             <button class="portfolio-btn">
@@ -69,25 +131,82 @@
 
       <!-- PORTFOLIO -->
 
+      <div class="work-example-blur"></div>
+      <section id="work-example-expanded">
+        <div class="close-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              d="m3 3l18 18M3 21L21 3"
+            />
+          </svg>
+        </div>
+        <section class="expanded-container">
+          <div class="caret-left">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40px"
+              height="40px"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="white"
+                d="M164.24 203.76a6 6 0 1 1-8.48 8.48l-80-80a6 6 0 0 1 0-8.48l80-80a6 6 0 0 1 8.48 8.48L88.49 128Z"
+              />
+            </svg>
+          </div>
+          <figure>
+            <img src="images/rfa-image.PNG" alt="" />
+            <figcaption>
+              <p>RaphaellaFkdArt - raphaellafkdart.com</p>
+              <button>Go There</button>
+            </figcaption>
+          </figure>
+          <div class="caret-right">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40px"
+              height="40px"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="white"
+                d="M164.24 203.76a6 6 0 1 1-8.48 8.48l-80-80a6 6 0 0 1 0-8.48l80-80a6 6 0 0 1 8.48 8.48L88.49 128Z"
+              />
+            </svg>
+          </div>
+        </section>
+      </section>
+
       <section id="work-examples">
         <div class="blur"></div>
         <h1>Our Works</h1>
         <section class="example_container">
           <section>
-            <article class="example hidden first">
+            <article class="example">
               <img src="images/wime-image.PNG" alt="" />
               <p>Women In MICE Ethiopia</p>
-              <button>Go To Website</button>
+              <span style="display: none">wimethiopia.org.et</span>
+              <button>View</button>
             </article>
-            <article class="example hidden second">
+            <article class="example">
               <img src="images/bro-image.PNG" alt="" />
               <p>Bright Events Organization</p>
-              <button>Go To Website</button>
+              <span style="display: none">brightevents.com</span>
+              <button>View</button>
             </article>
-            <article class="example hidden third">
+            <article class="example">
               <img src="images/rfa-image.PNG" alt="" />
               <p>RaphaellaFkdArt</p>
-              <button>Go To Website</button>
+              <span style="display: none">raphaellafkdart.com</span>
+              <button>View</button>
             </article>
           </section>
         </section>
@@ -215,10 +334,9 @@
             jonathanfekadu1@gmail.com
           </p>
           <ul class="footer_links">
-            <li><a href="#">Intro</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#work-examples">Portfolio</a></li>
-            <li><a href="#contact">Contact Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="">Chat With Us</a></li>
           </ul>
         </section>
       </section>

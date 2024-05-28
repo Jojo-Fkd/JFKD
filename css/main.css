@@ -49,6 +49,10 @@ body {
   background: var(--BGCOLOR);
 }
 
+body.hidden {
+  overflow: hidden;
+}
+
 /* WEBSITE THEME BUTTON STYLES */
 
 button {
@@ -91,6 +95,115 @@ q {
   text-align: justify;
 }
 
+/* BECOME A CLIENT REQUEST */
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.popup-container.active {
+  z-index: 1000;
+  opacity: 1;
+}
+
+.request {
+  background: var(--BGCOLOR);
+  color: var(--FONTCOLOR);
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.request .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.request article h3 {
+  font-family: var(--PRIMARY_FONT);
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.request article p {
+  font-family: var(--DESCRIPTION_FONT);
+  font-weight: 200;
+}
+
+.request form {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.request .basic-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.request .input-label {
+  font-family: var(--PRIMARY_FONT);
+  font-weight: 100;
+  margin: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.request input,
+.request textarea {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  padding-left: 1rem;
+  font-family: var(--PRIMARY_FONT);
+  font-size: 1.1rem;
+  color: var(--FONTCOLOR);
+}
+
+.request input::placeholder,
+.request textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.request input {
+  width: 270px;
+  height: 50px;
+}
+
+.request textarea {
+  width: 100%;
+  padding: 1rem;
+  resize: none;
+}
+
+.request button {
+  width: 100%;
+  background: var(--FONTCOLOR);
+  color: var(--BGCOLOR);
+}
+
 /* HEADER */
 
 header {
@@ -116,6 +229,12 @@ header h1 a:any-link {
   font-family: var(--PRIMARY_FONT);
   font-weight: 100;
   font-size: 2.2rem;
+}
+
+header nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 .nav_elements {
@@ -145,6 +264,24 @@ header h1 a:any-link {
 
 .nav_elements li a:any-link {
   font-family: var(--PRIMARY_FONT);
+}
+
+header nav button {
+  width: 170px;
+  height: 45px;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  border: 2px solid black;
+  background: var(--FONTCOLOR);
+  color: var(--BGCOLOR);
+  font-weight: 400;
+  transition: all 0.5s ease;
+}
+
+header nav button:hover {
+  border: 2px solid white;
+  background: transparent;
+  color: var(--FONTCOLOR);
 }
 
 /* HEADER RESPONSIVE DESIGN */
