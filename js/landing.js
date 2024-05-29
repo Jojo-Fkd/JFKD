@@ -85,4 +85,11 @@ dropIcon.onclick = () => {
   dropIcon.classList.toggle("active");
   navMobile.classList.toggle("active");
   body.classList.toggle("hidden");
+  navMobile.querySelectorAll("li").forEach((link) => {
+    link.onclick = () => {
+      dropIcon.classList.remove("active");
+      navMobile.classList.remove("active");
+      body.classList.remove("hidden");
+    };
+  });
 };
