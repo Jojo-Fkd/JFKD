@@ -49,7 +49,7 @@
 }
 
 .expanded-container figure img {
-  width: 600px;
+  width: 700px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
@@ -104,12 +104,15 @@
 #work-example-expanded .close-btn {
   position: sticky;
   top: 0;
-  padding-top: 5rem;
-  padding-left: 1rem;
-}
-
-#work-example-expanded .close-btn svg {
+  margin-top: 5rem;
+  margin-left: 1rem;
   cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-content: center;
 }
 
 #work-examples {

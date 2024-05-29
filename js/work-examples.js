@@ -20,7 +20,7 @@ workExamples.forEach((example) => {
   });
 
   /* IF USER WANTS TO VIEW TO WEBSITE (EXPANDED) */
-  const workExampleExpanded = document.querySelector("#work-example-expanded");
+  /*  const workExampleExpanded = document.querySelector("#work-example-expanded");
   const workExampleBlur = document.querySelector(".work-example-blur");
 
   const viewBtn = example.querySelector("button");
@@ -44,6 +44,8 @@ workExamples.forEach((example) => {
       workExampleExpanded.classList.remove("expand");
       body.classList.remove("hidden");
       workExampleBlur.classList.remove("blur");
-    };
-  };
+    }; 
+
+
+  }; */
 });
