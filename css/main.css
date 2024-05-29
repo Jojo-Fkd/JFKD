@@ -152,6 +152,13 @@ q {
   margin: 0.5rem 0;
 }
 
+.request article h3 a:any-link {
+  text-decoration: underline;
+  font-size: 1rem;
+  font-family: var(--DESCRIPTION_FONT);
+  font-weight: 100;
+}
+
 .request article p {
   font-family: var(--DESCRIPTION_FONT);
   font-weight: 200;

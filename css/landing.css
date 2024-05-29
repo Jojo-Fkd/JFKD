@@ -459,6 +459,79 @@
   }
 }
 
+/* PRICING */
+
+#pricing {
+  padding-top: 1rem;
+}
+
+#pricing section {
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--FONTCOLOR);
+  padding: 4rem;
+}
+
+.pricing-table {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.column {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 300px;
+}
+
+.column h3,
+.deliverables h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: var(--PRIMARY_FONT);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.column ul {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column ul li {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  align-self: stretch;
+  display: grid;
+  place-content: center;
+  font-family: var(--DESCRIPTION_FONT);
+}
+
+.deliverables ul {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.deliverables ul li {
+  padding-bottom: 0.5rem;
+  font-family: var(--DESCRIPTION_FONT);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+#pricing p.notice {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--DESCRIPTION_FONT);
+}
+
+/* CALL TO ACTION */
+
 .interest-cta {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -466,7 +539,7 @@
   gap: 1.5rem;
   place-items: center;
   padding: 2rem;
-  margin: 0 3rem;
+  margin: 3rem;
   position: relative;
 }
 
@@ -477,13 +550,16 @@
 }
 
 .interest-cta button {
+  border: 1px solid rgba(0, 0, 0, 0.5);
   background: var(--FONTCOLOR);
   color: var(--BGCOLOR);
   transition: all 0.3s ease;
 }
 
 .interest-cta button:hover {
-  transform: translateY(10px);
+  background: transparent;
+  border: 1px solid white;
+  color: var(--FONTCOLOR);
 }
 
 .cta-bg {
