@@ -14,6 +14,17 @@
     <meta name="description" content="JFKD - Portfolio Website" />
   </head>
   <body>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "kNZ-Tb_eB0QuDLSQ8",
+        });
+      })();
+    </script>
     <!-- REQUEST TO BECOME A CLIENT -->
 
     <div class="popup-container">
@@ -34,7 +45,7 @@
           </svg>
         </div>
         <article>
-          <h3>Become A Client <a href="#pricing">View Pricing</a></h3>
+          <h3>Become A Client</h3>
           <p>We Will Ensure You Get Swift Assistance From Us.</p>
         </article>
         <form action="">
@@ -69,13 +80,51 @@
             <ul class="type-list">
               <li>Business Website</li>
               <li>Ecommerece Website</li>
-              <li class="chosen">Nonprofit Website</li>
+              <li>Nonprofit Website</li>
               <li>Portfolio Website</li>
               <li>Other</li>
             </ul>
           </div>
           <button disabled>Submit Request</button>
         </form>
+      </section>
+      <section class="request-success">
+        <article>
+          <h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40px"
+              height="40px"
+              viewBox="0 0 15 15"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7.252.066a.5.5 0 0 1 .496 0l7 4A.5.5 0 0 1 15 4.5v.72a10.15 10.15 0 0 1-7.363 9.76a.5.5 0 0 1-.274 0A10.152 10.152 0 0 1 0 5.22V4.5a.5.5 0 0 1 .252-.434zm-.18 10.645l4.318-5.399l-.78-.624l-3.682 4.601L4.32 7.116l-.64.768z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Request Successful
+          </h3>
+          <p>
+            Your Request has just entered our email inbox, we will come back to
+            you.
+          </p>
+        </article>
+        <section>
+          <p class="submitted-name">
+            <span>Name & Establishment:</span> John from AMCE
+          </p>
+          <p class="submitted-email">
+            <span>Email Address:</span> john@amce.com
+          </p>
+          <p class="choice"><span>Type Of Website:</span> Portfolio Website</p>
+        </section>
+        <p class="notice">
+          * We will discuss through email or any media of your choice about your
+          specifications.
+        </p>
+        <button>Ok</button>
       </section>
     </div>
 
@@ -87,22 +136,38 @@
         <ul class="nav_elements">
           <li><a href="#work-examples">Portfolio</a></li>
           <li><a href="#services">Our Services</a></li>
-          <li><a href="">Chat With Us</a></li>
+          <li>
+            <a href="http://wa.me/+251978080244" target="_blank"
+              >Chat With Us</a
+            >
+          </li>
         </ul>
         <button>Become A Client +</button>
+        <div class="drop-icon">
+          <span></span>
+        </div>
       </nav>
     </header>
+    <ul class="nav-mobile">
+      <li><a href="#work-examples">Portfolio</a></li>
+      <li><a href="#services">Our Services</a></li>
+      <li>
+        <a href="http://wa.me/+251978080244" target="_blank">Chat With Us</a>
+      </li>
+    </ul>
     <main>
       <section id="introduction">
         <!-- _INTRODUCTION_ -->
         <article class="name">
           <ul>
-            <li>Website Solutions For Your Business</li>
+            <li>We Offer Website Solutions.</li>
             <li>JFKD Web Design & Development</li>
           </ul>
           <p>Chat With Our Dev To Get Started</p>
           <div class="intro-btns">
-            <button class="main_btn">Chat With Us</button>
+            <a href="http://wa.me/+251978080244" target="_blank">
+              <button class="main_btn">Chat With Us</button>
+            </a>
             <a href="#work-examples">
               <button class="portfolio-btn">Portfolio</button>
             </a>
@@ -126,8 +191,8 @@
               <li>Web Re-<span>Design</span></li>
             </ul>
             <p>
-              Quality Over Quantity <span></span> Full Client Satisfaction
-              <span></span> Straightforward Consultation
+              Consulation <span></span> Quality > Quantity <span></span> Client
+              Satisfaction
             </p>
           </figcaption>
         </figure>
@@ -216,7 +281,7 @@
           <figcaption class="hidden">
             <ul>
               <li>Capturing <span>Feelings</span></li>
-              <li><span>Dilligent</span> Understanding</li>
+              <li><span>Design</span> Reflected</li>
               <li>100% <span>Satisfaction</span></li>
             </ul>
             <p>
@@ -440,7 +505,9 @@
       </section> -->
       <article class="interest-cta">
         <h3>"Start A Chat With Our Dev To Get Started!"</h3>
-        <button>Chat With Us</button>
+        <a href="http://wa.me/+251978080244" target="_blank">
+          <button>Chat With Us</button>
+        </a>
         <img class="cta-bg" src="images/secondary-bg-circles.png" alt="" />
       </article>
     </main>
@@ -463,7 +530,7 @@
                 d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"
               ></path>
             </svg>
-            jonathanfekadu1@gmail.com
+            jfkd.webdev@gmail.com
           </p>
           <ul class="footer_links">
             <li><a href="#work-examples">Portfolio</a></li>

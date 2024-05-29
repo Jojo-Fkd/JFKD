@@ -20,7 +20,6 @@
   align-items: center;
   justify-content: center;
   height: 350px;
-  scroll-snap-align: start;
 }
 
 .name ul {
@@ -35,6 +34,7 @@
 .name ul li {
   font-family: var(--PRIMARY_FONT);
   font-weight: 300;
+  z-index: 1;
 }
 
 .name ul li:last-child {
@@ -58,6 +58,7 @@
   display: flex;
   gap: 2rem;
   scroll-snap-align: start;
+  z-index: 1;
 }
 
 .intro-btns .main_btn {
@@ -112,6 +113,79 @@
   right: 20px;
 }
 
+/* INTRO RESPONSIVE DESIGN */
+
+@media screen and (max-width: 940px) {
+  .name {
+    gap: 1.5rem;
+    height: 350px;
+    border: 1px solid;
+  }
+
+  .name ul {
+    font-size: 2.8rem;
+    gap: 0.5rem;
+  }
+
+  .name ul li:last-child {
+    font-size: 1.1rem;
+  }
+
+  .bg-circles-1 {
+    height: 180px;
+    width: 180px;
+  }
+
+  .bg-circles-3 {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .name ul {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .name ul li:first-child {
+    width: 320px;
+    text-align: center;
+  }
+
+  .intro-btns button {
+    width: 130px;
+    font-size: 0.95rem;
+  }
+
+  .bg-circles-3 {
+    display: none;
+  }
+
+  .bg-circles-1 {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .name {
+    border: 1px solid white;
+    width: 350px;
+  }
+
+  .name p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .name {
+    width: 320px;
+  }
+}
+
 /* _ABOUT_ */
 
 #about {
@@ -150,7 +224,7 @@
   display: flex;
   gap: 4rem;
   justify-content: center;
-  padding: 3rem;
+  padding: 3rem 0;
   color: white;
   width: 100%;
 }
@@ -200,6 +274,8 @@
 
 #about figure figcaption p {
   font-family: var(--PRIMARY_FONT);
+  display: flex;
+  align-items: center;
 }
 
 #about figure figcaption.show p {
@@ -225,6 +301,78 @@
   border-radius: 50%;
   margin: 0 0.5rem;
   background: var(--FONTCOLOR);
+}
+
+@media screen and (max-width: 990px) {
+  #about figure figcaption {
+    gap: 1rem;
+  }
+
+  #about figure figcaption ul {
+    line-height: 1.9;
+  }
+
+  #about figure figcaption ul li {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #about figure figcaption ul li {
+    font-size: 2.4rem;
+  }
+
+  .about-bg-1 {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #about figure figcaption ul li {
+    font-size: 2rem;
+    list-style-position: inside;
+  }
+
+  #about figure figcaption p {
+    font-size: 0.9rem;
+  }
+
+  #about figure figcaption p span {
+    height: 5px;
+    width: 5px;
+    margin: 0.3rem 0;
+  }
+
+  #about figure figcaption {
+    width: 360px;
+  }
+
+  #about figure figcaption p {
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #about figure figcaption p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  #about figure figcaption {
+    width: 320px;
+  }
+
+  #about figure figcaption ul li {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  #about figure figcaption {
+    width: 300px;
+  }
 }
 
 /* _SERVICES_ */
@@ -459,75 +607,41 @@
   }
 }
 
-/* PRICING */
+/* SERVICES RESPONSIVE DESIGN */
 
-#pricing {
-  padding-top: 1rem;
+@media screen and (max-width: 990px) {
+  .card {
+    width: 45vw;
+  }
+
+  .service-list {
+    margin-top: 2rem;
+  }
+
+  .service-list ul {
+    padding-left: 0;
+  }
 }
 
-#pricing section {
-  display: flex;
-  justify-content: space-evenly;
-  color: var(--FONTCOLOR);
-  padding: 4rem;
+@media screen and (max-width: 635px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  .service-list ul li {
+    font-size: 1.3rem;
+  }
 }
 
-.pricing-table {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.column {
-  padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  width: 300px;
-}
-
-.column h3,
-.deliverables h3 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  font-family: var(--PRIMARY_FONT);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.column ul {
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  align-items: center;
-}
-
-.column ul li {
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  align-self: stretch;
-  display: grid;
-  place-content: center;
-  font-family: var(--DESCRIPTION_FONT);
-}
-
-.deliverables ul {
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-}
-
-.deliverables ul li {
-  padding-bottom: 0.5rem;
-  font-family: var(--DESCRIPTION_FONT);
-  font-weight: 300;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-#pricing p.notice {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.8);
-  font-family: var(--DESCRIPTION_FONT);
+@media screen and (max-width: 450px) {
+  .service-list ul {
+    width: 90vw;
+  }
 }
 
 /* CALL TO ACTION */
@@ -547,6 +661,8 @@
   font-family: var(--PRIMARY_FONT);
   font-weight: 500;
   color: var(--FONTCOLOR);
+  text-align: center;
+  line-height: 1.6;
 }
 
 .interest-cta button {
