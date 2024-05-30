@@ -106,6 +106,7 @@ q {
   top: 0;
   left: 0;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   height: 100%;
   width: 100%;
   display: grid;
@@ -127,7 +128,7 @@ q {
   gap: 2rem;
   flex-direction: column;
   width: 600px;
-  height: 500px;
+  height: 520px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 5px;
   padding: 1.5rem;
@@ -295,6 +296,12 @@ q {
   background: var(--FONTCOLOR);
   color: var(--BGCOLOR);
   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 990px) {
+  .request {
+    height: 480px;
+  }
 }
 
 @media screen and (max-width: 660px) {
