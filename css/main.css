@@ -99,6 +99,44 @@ q {
   text-align: justify;
 }
 
+/* PAGE IS LOADING */
+
+main {
+  display: none;
+}
+
+.loading-page {
+  z-index: 10000;
+  background: var(--BGCOLOR);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+}
+
+.loading-page span {
+  height: 200px;
+  width: 200px;
+  border: 3px solid var(--FONTCOLOR);
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  animation: pageLoading 0.5s linear infinite;
+}
+
+@keyframes pageLoading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* BECOME A CLIENT REQUEST */
 
 .popup-container {

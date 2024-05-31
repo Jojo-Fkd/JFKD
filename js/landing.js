@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".loading-page").style.display = "none";
+  document.querySelector("main").style.display = "block";
+});
+
 const body = document.querySelector("body");
 
 /* ON SCROLL EFFECTS */

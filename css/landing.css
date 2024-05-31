@@ -307,10 +307,6 @@
   }
 }
 
-#about article ol {
-  display: none;
-}
-
 @media screen and (max-width: 520px) {
   #about article {
     gap: 3.5rem;
@@ -328,7 +324,6 @@
   #about article p {
     width: 100%;
     justify-content: center;
-    border: 1px solid;
   }
 }
 
@@ -343,20 +338,6 @@
 
   #about article p {
     display: none;
-  }
-
-  #about article ol {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    line-height: 1.9;
-    padding-left: 5rem;
-  }
-
-  #about article ol li {
-    font-family: var(--PRIMARY_FONT);
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.8);
   }
 }
 
