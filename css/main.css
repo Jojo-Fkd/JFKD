@@ -113,12 +113,38 @@ q {
   place-content: center;
   z-index: -1;
   opacity: 0;
+
   transition: all 0.3s ease;
 }
 
 .popup-container.active {
   z-index: 1000;
   opacity: 1;
+}
+
+.loading {
+  height: 100px;
+  width: 100px;
+  border: 5px solid white;
+  border-radius: 50%;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  display: none;
+}
+
+.loading.load {
+  display: block;
+  animation: loading 0.8s linear infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .request {

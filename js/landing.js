@@ -26,6 +26,7 @@ becomeClientBtn.onclick = () => {
   popupContainer.classList.add("active");
   body.classList.add("hidden");
   const closeBtn = popupContainer.querySelector(".request .close-btn");
+
   closeBtn.onclick = () => {
     popupContainer.classList.remove("active");
     body.classList.remove("hidden");
@@ -36,6 +37,7 @@ becomeClientBtn.onclick = () => {
   const options = popupContainer.querySelectorAll(
     ".request .website-type .type-list li"
   );
+
   options.forEach((option) => {
     option.onclick = () => {
       const formBtn = popupContainer.querySelector(".request form button");
@@ -47,9 +49,16 @@ becomeClientBtn.onclick = () => {
 
       // SUBMISSION OF REQUEST
 
+      const loading = popupContainer.querySelector(".loading");
+      const becomeClientPopup = popupContainer.querySelector(".request");
+
       const form = popupContainer.querySelector(".request form");
       form.addEventListener("submit", (event) => {
         event.preventDefault();
+
+        becomeClientPopup.style.display = "none";
+        loading.classList.add("load");
+
         let params = {
           from_name: form.querySelector("#name-establishment").value,
           from_email: form.querySelector("#email").value,
@@ -59,7 +68,7 @@ becomeClientBtn.onclick = () => {
         emailjs
           .send("service_7z6ushb", "template_nvw89rq", params)
           .then(() => {
-            popupContainer.querySelector(".request").style.display = "none";
+            loading.classList.remove("load");
             const successPopup =
               popupContainer.querySelector(".request-success");
             successPopup.classList.add("success");
@@ -67,9 +76,11 @@ becomeClientBtn.onclick = () => {
               location.reload();
             };
           })
-          .catch((err) => {
-            console.log(err);
-            alert("Failed, try again");
+          .catch(() => {
+            loading.classList.remove("load");
+            alert(
+              "It seems like there was an issue submitting your form. Please try again"
+            );
             location.reload();
           });
       });
