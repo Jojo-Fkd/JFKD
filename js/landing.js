@@ -67,7 +67,8 @@ becomeClientBtn.onclick = () => {
               location.reload();
             };
           })
-          .catch(() => {
+          .catch((err) => {
+            console.log(err);
             alert("Failed, try again");
             location.reload();
           });
