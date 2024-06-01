@@ -622,18 +622,55 @@
 
 /* CALL TO ACTION */
 
-.interest-cta {
-  display: grid;
-  gap: 1.5rem;
-  place-items: center;
+figure.main-cta {
   padding: 2rem;
-  margin: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+figure.main-cta img {
+  width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  filter: brightness(80%);
+}
+
+figure.main-cta figcaption {
+  color: var(--FONTCOLOR);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+figure.main-cta figcaption h3 {
+  font-family: var(--PRIMARY_FONT);
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+figure.main-cta figcaption p {
+  font-family: var(--DESCRIPTION_FONT);
+  font-weight: 200;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+.interest-cta {
   position: relative;
+  margin-top: 1rem;
+  padding: 0 !important;
 }
 
 .interest-cta h3 {
   font-family: var(--PRIMARY_FONT);
   font-weight: 500;
+  font-size: 1rem !important;
+  margin-bottom: 1rem !important;
   color: var(--FONTCOLOR);
   text-align: center;
   line-height: 1.6;
@@ -652,15 +689,50 @@
   color: var(--FONTCOLOR);
 }
 
-.cta-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 300px;
-  width: 300px;
-  opacity: 0.01;
-  z-index: -1;
+@media screen and (max-width: 990px) {
+  figure.main-cta img {
+    width: 400px;
+  }
+
+  figure.main-cta figcaption h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  figure.main-cta figcaption p {
+    line-height: 1.8;
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  figure.main-cta {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  figure.main-cta {
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  figure.main-cta img {
+    width: 100%;
+  }
+
+  figure.main-cta figcaption h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+  }
+
+  figure.main-cta figcaption p {
+    line-height: 1.8;
+    margin-bottom: 0.6rem;
+  }
 }
 
 @media screen and (max-width: 440px) {
