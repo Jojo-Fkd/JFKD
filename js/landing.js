@@ -112,7 +112,7 @@ serviceCardBtns.forEach((btn) => {
     if (topic.innerText === "Design & Development") {
       workProcess.innerHTML = `
          <article class="process-head">
-            <h3>How We Work ~ Web Design & Development</h3>
+            <h3>How We Work <span>~ Web Design & Development</span></h3>
             <div class="close-btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +169,7 @@ serviceCardBtns.forEach((btn) => {
     } else if (topic.innerText === "Re-design") {
       workProcess.innerHTML = `
          <article class="process-head">
-            <h3>How We Work ~ Web Re-design</h3>
+            <h3>How We Work <span>~ Web Re-design</span></h3>
             <div class="close-btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
