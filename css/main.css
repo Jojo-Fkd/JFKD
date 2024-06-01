@@ -781,6 +781,7 @@ header nav button:hover {
 /* FOOTER CONTENT */
 
 footer {
+  margin-top: 3rem;
   padding: 1rem;
   max-width: 100vw;
   display: flex;
