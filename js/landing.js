@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     body.style.overflow = "auto";
     console.log("loaded");
     loading.classList.remove("load");
-  }, 500);
+  }, 1000);
 });
 
 /* ON SCROLL EFFECTS */
