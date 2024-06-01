@@ -349,6 +349,81 @@
 
 /* _SERVICES_ */
 
+/* HOW WE WORK - SERVICES, FURTHER DESCRIPTION */
+
+.services-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.services-popup.active {
+  z-index: 10000;
+  opacity: 1;
+}
+
+#work-process {
+  background: var(--BGCOLOR);
+  width: 60vw;
+  height: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  padding: 1.5rem;
+  color: var(--FONTCOLOR);
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.process-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.process-head h3 {
+  font-family: var(--PRIMARY_FONT);
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.process-head .close-btn {
+  position: unset;
+}
+
+.process-content {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+.process-content p {
+  font-family: var(--DESCRIPTION_FONT);
+  font-weight: 200;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.process-content ol {
+  line-height: 1.9;
+}
+
+.process-content ol li {
+  font-family: var(--DESCRIPTION_FONT);
+  list-style-position: inside;
+  font-weight: 300;
+}
+
 #services {
   display: flex;
   flex-direction: column;
@@ -428,8 +503,8 @@
 }
 
 .card {
-  width: 300px;
-  height: 350px;
+  width: 320px;
+  height: 340px;
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -438,7 +513,7 @@
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .show .card:first-child {
@@ -543,7 +618,7 @@
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  width: 400px;
+  width: 340px;
   list-style: decimal-leading-zero;
   list-style-position: inside;
   padding-left: 3rem;
@@ -598,51 +673,110 @@
 /* SERVICES RESPONSIVE DESIGN */
 
 @media screen and (max-width: 990px) {
-  .card {
-    width: 45vw;
+  #services {
+    gap: 2.2rem;
   }
 
-  .service-list {
-    margin-top: 2rem;
-  }
-
-  .service-list ul {
-    padding-left: 0;
-  }
-}
-
-@media screen and (max-width: 635px) {
-  .main h1 {
-    font-size: 2.5rem;
-  }
-
-  .services {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 300px;
-  }
-
-  .service-list ul li {
-    font-size: 1.3rem;
-  }
-}
-
-@media screen and (max-width: 450px) {
   .main q {
     width: 100%;
   }
 
-  .service-list ul {
-    width: 90vw;
+  .services {
+    gap: 0.5rem;
+  }
+
+  .card {
+    width: 280px;
+    height: 340px;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    line-height: 1.9;
+    height: 130px;
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 950px) {
+  .services {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .card {
     width: 100%;
+    height: 300px;
+  }
+
+  .card p {
+    height: 100px;
+  }
+
+  .services ul {
+    padding-left: 0;
+  }
+
+  .service-list ul {
+    width: 100%;
+  }
+
+  .service-list ul li {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .main h1 {
+    font-size: 2.3rem;
+  }
+
+  .card {
+    height: 320px;
+  }
+
+  .card p {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    height: 290px;
+  }
+
+  .card p {
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .service-list ul li {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .card {
+    height: 320px;
+  }
+
+  .card p {
+    height: 120px;
+  }
+
+  .service-list ul li {
+    font-size: 1.2rem;
   }
 }
 

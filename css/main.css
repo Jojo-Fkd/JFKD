@@ -270,7 +270,7 @@ body {
   filter: brightness(80%);
 }
 
-.request .close-btn {
+.close-btn {
   position: absolute;
   top: 20px;
   right: 20px;
