@@ -1,9 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".loading-page").style.display = "none";
-  document.querySelector("main").style.display = "block";
-});
-
 const body = document.querySelector("body");
+const loading = document.querySelector(".loading-page");
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    body.style.overflow = "auto";
+    console.log("loaded");
+    loading.classList.remove("load");
+  }, 500);
+});
 
 /* ON SCROLL EFFECTS */
 

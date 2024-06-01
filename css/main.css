@@ -101,12 +101,7 @@ q {
 
 /* PAGE IS LOADING */
 
-main {
-  display: none;
-}
-
 .loading-page {
-  z-index: 10000;
   background: var(--BGCOLOR);
   height: 100%;
   width: 100%;
@@ -115,16 +110,28 @@ main {
   left: 0;
   display: grid;
   place-content: center;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.6s ease-in-out;
+}
+
+.loading-page.load {
+  opacity: 1;
+  z-index: 1000;
+}
+
+body {
+  overflow: hidden;
 }
 
 .loading-page span {
-  height: 200px;
-  width: 200px;
-  border: 3px solid var(--FONTCOLOR);
+  height: 120px;
+  width: 120px;
+  border: 4px solid var(--FONTCOLOR);
   border-top: 3px solid transparent;
   border-left: 3px solid transparent;
   border-radius: 50%;
-  animation: pageLoading 0.5s linear infinite;
+  animation: pageLoading 1s linear infinite;
 }
 
 @keyframes pageLoading {
