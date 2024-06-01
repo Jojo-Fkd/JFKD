@@ -73,8 +73,8 @@
 }
 
 .example button {
-  height: 35px;
-  width: 120px;
+  height: 40px;
+  width: 130px;
   font-size: 0.8rem;
   background: var(--BGCOLOR);
   color: var(--FONTCOLOR);
@@ -83,11 +83,14 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .example button:hover {
   box-shadow: -5px 5px 0 rgba(255, 255, 255, 0.8);
-  width: 130px;
+  width: 135px;
 }
 
 /* RESPONSIVE DESIGN */
