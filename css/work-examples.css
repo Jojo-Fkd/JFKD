@@ -1,6 +1,7 @@
 #work-examples {
   min-height: 100vh;
   gap: 2.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   background: url(../images/rfa-image.PNG);

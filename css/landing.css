@@ -428,7 +428,7 @@
 }
 
 .card {
-  width: 290px;
+  width: 300px;
   height: 350px;
   display: flex;
   gap: 1rem;
@@ -520,7 +520,23 @@
   font-weight: 200;
   line-height: 1.9;
   text-align: center;
-  height: 150px;
+  height: 130px;
+}
+
+.card button {
+  background: var(--FONTCOLOR);
+  color: var(--BGCOLOR);
+  height: 40px;
+  width: 130px;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--FONTCOLOR);
+}
+
+.card button:hover {
+  background: transparent;
+  color: var(--FONTCOLOR);
 }
 
 .service-list ul {
@@ -615,8 +631,18 @@
 }
 
 @media screen and (max-width: 450px) {
+  .main q {
+    width: 100%;
+  }
+
   .service-list ul {
     width: 90vw;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .card {
+    width: 100%;
   }
 }
 
@@ -672,7 +698,6 @@ figure.main-cta figcaption p {
   font-size: 1rem !important;
   margin-bottom: 1rem !important;
   color: var(--FONTCOLOR);
-  text-align: center;
   line-height: 1.6;
 }
 
@@ -742,11 +767,5 @@ figure.main-cta figcaption p {
 
   .interest-cta h3 {
     font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 355px) {
-  .interest-cta h3 {
-    font-size: 0.92rem;
   }
 }
