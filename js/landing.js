@@ -108,7 +108,6 @@ serviceCardBtns.forEach((btn) => {
     servicePopup.classList.add("active");
 
     const topic = btn.previousElementSibling.previousElementSibling;
-    console.log(topic);
     if (topic.innerText === "Design & Development") {
       workProcess.innerHTML = `
          <article class="process-head">
@@ -230,16 +229,22 @@ serviceCardBtns.forEach((btn) => {
 
 const dropIcon = document.querySelector(".drop-icon");
 const navMobile = document.querySelector(".nav-mobile");
+const blur = document.querySelector(".blur");
 
 dropIcon.onclick = () => {
-  dropIcon.classList.toggle("active");
-  navMobile.classList.toggle("active");
-  body.classList.toggle("hidden");
+  navMobile.classList.add("active");
+  body.classList.add("hidden");
+  blur.classList.add("active");
+  blur.querySelector(".close-btn").onclick = () => {
+    navMobile.classList.remove("active");
+    body.classList.remove("hidden");
+    blur.classList.remove("active");
+  };
   navMobile.querySelectorAll("li").forEach((link) => {
     link.onclick = () => {
-      dropIcon.classList.remove("active");
       navMobile.classList.remove("active");
       body.classList.remove("hidden");
+      blur.classList.remove("active");
     };
   });
 };
