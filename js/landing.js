@@ -229,7 +229,7 @@ serviceCardBtns.forEach((btn) => {
 
 const dropIcon = document.querySelector(".drop-icon");
 const navMobile = document.querySelector(".nav-mobile");
-const blur = document.querySelector(".blur");
+const blur = document.querySelector(".mobile-blur");
 
 dropIcon.onclick = () => {
   navMobile.classList.add("active");

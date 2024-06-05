@@ -639,7 +639,7 @@ header nav button:hover {
     display: none;
   }
 
-  .blur {
+  .mobile-blur {
     position: absolute;
     top: 0;
     left: 0;
@@ -654,12 +654,12 @@ header nav button:hover {
     padding-top: 2rem;
   }
 
-  .blur.active {
+  .mobile-blur.active {
     opacity: 1;
     z-index: 1000;
   }
 
-  .blur .close-btn {
+  .mobile-blur .close-btn {
     height: 40px;
     width: 40px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -894,8 +894,27 @@ footer {
   }
 }
 
-@media screen and (max-width: 480px) {
-  * {
-    animation: none;
+@media screen and (max-width: 395px) {
+  .quote li:first-child {
+    font-size: 1.7rem;
+  }
+
+  .quote li:last-child {
+    font-size: 0.9rem;
+  }
+
+  .footer_links {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .main_footer_content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .footer_links {
+    gap: 1.2rem;
   }
 }
