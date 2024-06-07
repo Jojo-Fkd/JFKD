@@ -146,8 +146,8 @@ q {
   position: fixed;
   top: 0;
   left: 0;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: brightness(80%) blur(2px);
+  backdrop-filter: brightness(80%) blur(2px);
   height: 100%;
   width: 100%;
   display: grid;
@@ -201,6 +201,14 @@ q {
   padding: 1.5rem;
   position: relative;
   overflow-y: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.request.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .request-success {
@@ -283,6 +291,7 @@ q {
   font-family: var(--PRIMARY_FONT);
   font-size: 2.5rem;
   margin: 0.5rem 0;
+  font-weight: 300;
 }
 
 .request article p {
@@ -297,35 +306,36 @@ q {
 }
 
 .request .basic-info {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr;
 }
 
 .request .input-label {
   font-family: var(--PRIMARY_FONT);
   font-weight: 100;
-  margin: 0.4rem;
+  margin: 0.6rem 0;
   font-size: 0.9rem;
 }
 
-.request input,
-.request textarea {
+.request input {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding-left: 1rem;
   font-family: var(--PRIMARY_FONT);
   font-size: 1.1rem;
   color: var(--FONTCOLOR);
-}
-
-.request input::placeholder,
-.request textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.request input {
-  width: 270px;
+  transition: all 0.3s ease;
   height: 50px;
+  width: 100%;
+}
+
+.request input:focus {
+  border: 1px solid white;
+}
+
+.request input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .type-list {
@@ -394,11 +404,6 @@ q {
     flex-direction: column;
   }
 
-  .request .basic-info {
-    gap: 0.5rem;
-    flex-direction: column;
-  }
-
   .type-list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -446,13 +451,6 @@ q {
 
   .request article h3 {
     font-size: 1.8rem;
-  }
-
-  .request input,
-  .request textarea {
-    padding-left: 0.8rem;
-    font-size: 0.95rem;
-    width: 100%;
   }
 }
 

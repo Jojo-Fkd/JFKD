@@ -353,7 +353,8 @@
   left: 0;
   height: 100%;
   width: 100%;
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: brightness(80%) blur(2px);
+  backdrop-filter: brightness(80%) blur(2px);
   display: grid;
   place-content: center;
   opacity: 0;

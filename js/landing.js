@@ -33,12 +33,14 @@ const popupContainer = document.querySelector(".popup-container");
 
 becomeClientBtn.onclick = () => {
   popupContainer.classList.add("active");
-  body.classList.add("hidden");
+  popupContainer.querySelector(".request").classList.add("active");
+  body.style.overflow = "hidden";
   const closeBtn = popupContainer.querySelector(".request .close-btn");
 
   closeBtn.onclick = () => {
     popupContainer.classList.remove("active");
-    body.classList.remove("hidden");
+    popupContainer.querySelector(".request").classList.remove("active");
+    body.style.overflow = "auto";
   };
 
   // CLIENT HAS TO PICK WHAT TYPE OF WEBSITE THEY WANT
@@ -66,6 +68,7 @@ becomeClientBtn.onclick = () => {
         event.preventDefault();
 
         becomeClientPopup.style.display = "none";
+
         loading.classList.add("load");
 
         let params = {
@@ -106,7 +109,7 @@ const workProcess = servicePopup.querySelector("#work-process");
 serviceCardBtns.forEach((btn) => {
   btn.onclick = () => {
     servicePopup.classList.add("active");
-
+    body.style.overflow = "hidden";
     const topic = btn.previousElementSibling.previousElementSibling;
     if (topic.innerText === "Design & Development") {
       workProcess.innerHTML = `
@@ -163,6 +166,7 @@ serviceCardBtns.forEach((btn) => {
           </article>
       `;
       workProcess.querySelector(".close-btn").onclick = () => {
+        body.style.overflow = "auto";
         servicePopup.classList.remove("active");
       };
     } else if (topic.innerText === "Re-design") {
@@ -219,6 +223,7 @@ serviceCardBtns.forEach((btn) => {
           </article>
       `;
       workProcess.querySelector(".close-btn").onclick = () => {
+        body.style.overflow = "auto";
         servicePopup.classList.remove("active");
       };
     }
