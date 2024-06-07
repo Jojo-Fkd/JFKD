@@ -233,17 +233,17 @@ const blur = document.querySelector(".mobile-blur");
 
 dropIcon.onclick = () => {
   navMobile.classList.add("active");
-  body.classList.add("hidden");
+  body.style.overflow = "hidden";
   blur.classList.add("active");
   blur.querySelector(".close-btn").onclick = () => {
     navMobile.classList.remove("active");
-    body.classList.remove("hidden");
+    body.style.overflow = "auto";
     blur.classList.remove("active");
   };
   navMobile.querySelectorAll("li").forEach((link) => {
     link.onclick = () => {
       navMobile.classList.remove("active");
-      body.classList.remove("hidden");
+      body.style.overflow = "auto";
       blur.classList.remove("active");
     };
   });
