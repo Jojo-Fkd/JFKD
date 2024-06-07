@@ -246,6 +246,8 @@
   display: list-item;
   font-size: 3rem;
   font-family: var(--PRIMARY_FONT);
+  color: var(--FONTCOLOR);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #about article.show ul li {
@@ -261,12 +263,6 @@
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-#about article ul li span {
-  color: var(--BGCOLOR);
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
-  font-family: var(--DESCRIPTION_FONT);
 }
 
 #about article p {
