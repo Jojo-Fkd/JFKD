@@ -3,41 +3,35 @@
 #introduction {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
   position: relative;
   background: url(../images/bg-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-}
-
-.name {
-  display: flex;
-  gap: 1.5rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 350px;
-}
-
-.name ul {
-  font-size: 3rem;
   color: var(--FONTCOLOR);
+}
+
+#introduction article {
   display: flex;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
   flex-direction: column;
 }
 
-.name ul li {
+#introduction article p {
+  font-size: 3rem;
   font-family: var(--PRIMARY_FONT);
   font-weight: 300;
   z-index: 1;
+  text-align: center;
 }
 
-.name ul li:last-child {
+#introduction article h1 {
   font-size: 1.2rem;
   letter-spacing: 0.8px;
   font-family: var(--DESCRIPTION_FONT);
@@ -45,11 +39,10 @@
   text-transform: uppercase;
 }
 
-.name p {
+p.first_cta {
   font-family: var(--DESCRIPTION_FONT);
   font-weight: 100;
   color: var(--FONTCOLOR);
-  width: 400px;
   line-height: 1.7;
   text-align: center;
 }
@@ -116,20 +109,6 @@
 /* INTRO RESPONSIVE DESIGN */
 
 @media screen and (max-width: 850px) {
-  .name {
-    gap: 1.5rem;
-    height: 350px;
-  }
-
-  .name ul {
-    font-size: 2.8rem;
-    gap: 0.5rem;
-  }
-
-  .name ul li:last-child {
-    font-size: 1.1rem;
-  }
-
   .bg-circles-1 {
     height: 180px;
     width: 180px;
@@ -141,24 +120,20 @@
   }
 }
 
-@media screen and (max-width: 605px) {
-  .name ul {
-    font-size: 2.4rem;
+@media screen and (max-width: 775px) {
+  #introduction article p {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #introduction article p {
+    font-size: 2.7rem;
+    width: 400px;
   }
 }
 
 @media screen and (max-width: 520px) {
-  .name ul li:first-child {
-    width: 340px;
-    text-align: center;
-    font-size: 2.7rem;
-  }
-
-  .intro-btns button {
-    width: 130px;
-    font-size: 0.95rem;
-  }
-
   .bg-circles-3 {
     display: none;
   }
@@ -169,26 +144,27 @@
   }
 }
 
-@media screen and (max-width: 415px) {
-  .name {
-    width: 350px;
+@media screen and (max-width: 400px) {
+  #introduction {
+    gap: 1rem;
   }
 
-  .name p {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 370px) {
-  .name ul li:first-child {
+  #introduction article p {
     width: 320px;
     font-size: 2.3rem;
   }
-}
 
-@media screen and (max-width: 350px) {
-  .name {
-    width: 320px;
+  #introduction article h1 {
+    font-size: 1rem;
+  }
+
+  .intro-btns {
+    gap: 1rem;
+  }
+
+  .intro-btns button {
+    width: 130px;
+    font-size: 0.95rem;
   }
 }
 
