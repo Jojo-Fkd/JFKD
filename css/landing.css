@@ -24,7 +24,7 @@
 }
 
 #introduction article p {
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: var(--PRIMARY_FONT);
   font-weight: 300;
   z-index: 1;
@@ -107,6 +107,12 @@ p.first_cta {
 }
 
 /* INTRO RESPONSIVE DESIGN */
+
+@media screen and (max-width: 990px) {
+  #introduction article p {
+    font-size: 3.5rem;
+  }
+}
 
 @media screen and (max-width: 850px) {
   .bg-circles-1 {
