@@ -33,7 +33,7 @@
 }
 
 #introduction article h1 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   letter-spacing: 0.8px;
   font-family: var(--DESCRIPTION_FONT);
   font-weight: 200;
@@ -42,9 +42,8 @@
 
 p.first_cta {
   font-family: var(--DESCRIPTION_FONT);
-  font-weight: 100;
+  font-weight: 200;
   color: var(--FONTCOLOR);
-  line-height: 1.7;
   text-align: center;
 }
 
