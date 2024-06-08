@@ -148,6 +148,10 @@ p.first_cta {
     width: 140px;
     height: 140px;
   }
+
+  #introduction article h1 {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (max-width: 400px) {

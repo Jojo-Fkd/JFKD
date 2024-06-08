@@ -743,16 +743,9 @@ header nav button:hover {
 }
 
 @media screen and (max-width: 500px) {
-  header {
-    padding: 0 1rem;
-  }
-
   header nav {
     gap: 0.2rem;
   }
-}
-
-@media screen and (max-width: 480px) {
   header {
     height: 80px;
     align-items: flex-start;
@@ -772,6 +765,9 @@ header nav button:hover {
     width: 150px;
     font-size: 0.8rem;
   }
+}
+
+@media screen and (max-width: 480px) {
 }
 
 /* FOOTER CONTENT */
