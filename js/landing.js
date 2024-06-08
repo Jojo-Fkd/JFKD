@@ -1,10 +1,11 @@
 const body = document.querySelector("body");
 const loading = document.querySelector(".loading-page");
 
+body.style.overflow = "hidden";
+
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     body.style.overflow = "auto";
-    console.log("loaded");
     loading.classList.remove("load");
   }, 1000);
 });
