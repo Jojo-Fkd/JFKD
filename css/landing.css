@@ -25,7 +25,7 @@
 }
 
 #introduction article p {
-  font-size: 4rem;
+  font-size: 3.7rem;
   font-family: var(--PRIMARY_FONT);
   font-weight: 300;
   z-index: 1;
@@ -114,7 +114,7 @@ p.first_cta {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .bg-circles-1 {
     height: 180px;
     width: 180px;
@@ -124,11 +124,13 @@ p.first_cta {
     width: 120px;
     height: 120px;
   }
-}
 
-@media screen and (max-width: 775px) {
   #introduction article p {
     font-size: 2.6rem;
+  }
+
+  #introduction article {
+    gap: 0.5rem;
   }
 }
 
