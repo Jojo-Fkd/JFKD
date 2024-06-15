@@ -13,7 +13,10 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  -webkit-background-size: cover;
+  -webkit-background-repeat: cover;
+  -webkit-background-position: center;
+  -webkit-background-size: center;
+  -webkit-background-attachment: center;
   color: var(--FONTCOLOR);
 }
 
