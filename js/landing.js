@@ -85,6 +85,17 @@ becomeClientBtn.onclick = () => {
             const successPopup =
               popupContainer.querySelector(".request-success");
             successPopup.classList.add("success");
+            const submittedName = successPopup.querySelector(".submitted-name");
+            const submittedEmail =
+              successPopup.querySelector(".submitted-email");
+            const choice = successPopup.querySelector(".choice");
+            submittedName.innerHTML = `<span>Name & Establishment:</span> ${
+              form.querySelector("#name-establishment").value
+            }`;
+            submittedEmail.innerHTML = `<span>Email Address:</span> ${
+              form.querySelector("#email").value
+            }`;
+            choice.innerHTML = `<span>Type Of Website:</span> ${option.innerHTML}`;
             successPopup.querySelector("button").onclick = () => {
               location.reload();
             };
