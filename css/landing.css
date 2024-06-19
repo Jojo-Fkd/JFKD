@@ -460,8 +460,12 @@ p.first_cta {
 
 @media screen and (max-width: 430px) {
   #work-process {
-    width: 100%;
+    width: 310px;
     padding: 1rem;
+  }
+
+  #work-process h3 span {
+    font-size: 1.1rem;
   }
 }
 
@@ -469,11 +473,6 @@ p.first_cta {
   .process-head h3 {
     font-size: 1.6rem;
   }
-
-  #work-process h3 span {
-    font-size: 1.3rem;
-  }
-
   .process-content {
     gap: 1rem;
   }
@@ -494,12 +493,6 @@ p.first_cta {
 
   .process-content ol li {
     font-size: 0.95rem;
-  }
-}
-
-@media screen and (max-width: 335px) {
-  #work-process h3 span {
-    font-size: 1.1rem;
   }
 }
 

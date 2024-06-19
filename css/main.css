@@ -639,7 +639,7 @@ header nav button:hover {
   }
 
   .mobile-blur {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
