@@ -8,7 +8,7 @@
   justify-content: center;
   gap: 1.5rem;
   position: relative;
-  background: url(../images/bg-image.jpg);
+  background: url(../images/bg-image.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -692,7 +692,7 @@ p.first_cta {
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  width: 340px;
+  width: 420px;
   list-style: decimal-leading-zero;
   list-style-position: inside;
   padding-left: 3rem;
@@ -747,36 +747,6 @@ p.first_cta {
 /* SERVICES RESPONSIVE DESIGN */
 
 @media screen and (max-width: 990px) {
-  #services {
-    gap: 2.2rem;
-  }
-
-  .main q {
-    width: 100%;
-  }
-
-  .services {
-    gap: 0.5rem;
-  }
-
-  .card {
-    width: 280px;
-    height: 340px;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .card h3 {
-    font-size: 1.4rem;
-  }
-
-  .card p {
-    line-height: 1.9;
-    height: 130px;
-  }
-}
-
-@media screen and (max-width: 950px) {
   .services {
     display: grid;
     gap: 2rem;
@@ -945,7 +915,7 @@ figure.main-cta figcaption p {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   figure.main-cta {
     align-items: center;
     gap: 1rem;
