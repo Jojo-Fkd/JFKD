@@ -13,10 +13,6 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  -webkit-background-repeat: cover;
-  -webkit-background-position: center;
-  -webkit-background-size: center;
-  -webkit-background-attachment: center;
   color: var(--FONTCOLOR);
 }
 
@@ -27,12 +23,13 @@
   flex-direction: column;
 }
 
-#introduction article p {
+#introduction article q {
   font-size: 3.7rem;
   font-family: var(--PRIMARY_FONT);
   font-weight: 300;
   z-index: 1;
   text-align: center;
+  width: 100%;
 }
 
 #introduction article h1 {
@@ -41,6 +38,8 @@
   font-family: var(--DESCRIPTION_FONT);
   font-weight: 200;
   text-transform: uppercase;
+  text-align: center;
+  z-index: 1;
 }
 
 p.first_cta {
@@ -112,8 +111,8 @@ p.first_cta {
 /* INTRO RESPONSIVE DESIGN */
 
 @media screen and (max-width: 990px) {
-  #introduction article p {
-    font-size: 3.5rem;
+  #introduction article q {
+    font-size: 3rem;
   }
 }
 
@@ -128,7 +127,7 @@ p.first_cta {
     height: 120px;
   }
 
-  #introduction article p {
+  #introduction article q {
     font-size: 2.6rem;
   }
 
@@ -137,10 +136,13 @@ p.first_cta {
   }
 }
 
-@media screen and (max-width: 575px) {
-  #introduction article p {
-    font-size: 2.7rem;
-    width: 400px;
+@media screen and (max-width: 660px) {
+  #introduction article q {
+    font-size: 2.2rem;
+  }
+
+  #introduction article h1 {
+    font-size: 1.3rem;
   }
 }
 
@@ -153,24 +155,19 @@ p.first_cta {
     width: 140px;
     height: 140px;
   }
+}
 
-  #introduction article h1 {
-    font-size: 1.1rem;
+@media screen and (max-width: 500px) {
+  #introduction article q {
+    font-size: 2rem;
+    width: 320px;
+    line-height: 1.5;
   }
 }
 
 @media screen and (max-width: 400px) {
   #introduction {
     gap: 1rem;
-  }
-
-  #introduction article p {
-    width: 320px;
-    font-size: 2.5rem;
-  }
-
-  #introduction article h1 {
-    font-size: 1rem;
   }
 
   .intro-btns {
