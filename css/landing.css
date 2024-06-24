@@ -138,7 +138,7 @@ p.first_cta {
 
 @media screen and (max-width: 660px) {
   #introduction article q {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   #introduction article h1 {
@@ -155,11 +155,8 @@ p.first_cta {
     width: 140px;
     height: 140px;
   }
-}
 
-@media screen and (max-width: 500px) {
   #introduction article q {
-    font-size: 2rem;
     width: 320px;
     line-height: 1.5;
   }
@@ -170,6 +167,10 @@ p.first_cta {
     gap: 1rem;
   }
 
+  #introduction article h1 {
+    font-size: 1.1rem;
+  }
+
   .intro-btns {
     gap: 1rem;
   }
@@ -177,6 +178,12 @@ p.first_cta {
   .intro-btns button {
     width: 130px;
     font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #introduction article q {
+    font-size: 2.2rem;
   }
 }
 
