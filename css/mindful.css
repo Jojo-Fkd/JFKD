@@ -1,0 +1,282 @@
+:root {
+  --BG-COLOR-BLACK: #ebebeb;
+  --MAIN-BG-COLOR-BLACK: #202020;
+}
+
+body,
+header {
+  background: var(--BG-COLOR-BLACK);
+}
+
+header {
+  display: flex;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-family: var(--PRIMARY_FONT);
+  color: var(--MAIN-BG-COLOR-BLACK);
+  font-weight: 300;
+}
+
+.nav_elements {
+  display: flex !important;
+}
+
+nav ul li {
+  align-self: center;
+}
+
+nav ul li {
+  color: var(--MAIN-BG-COLOR-BLACK);
+  font-family: var(--DESCRIPTION_FONT);
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+nav ul li:hover {
+  opacity: 0.7;
+}
+
+button#free-demo {
+  background: var(--MAIN-BG-COLOR-BLACK);
+  color: var(--BG-COLOR-BLACK);
+  transition: all 0.3s ease;
+  font-family: var(--DESCRIPTION_FONT);
+}
+
+button#free-demo:hover {
+  opacity: 0.8;
+  border: none;
+}
+
+@media screen and (max-width: 780px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav ul li {
+    font-size: 1.1rem;
+  }
+
+  button#free-demo {
+    font-weight: 300;
+    font-size: 0.9rem;
+    width: 150px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul li {
+    font-size: 0.9rem;
+  }
+
+  button#free-demo {
+    font-weight: 200;
+    font-size: 0.8rem;
+    width: 140px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header nav ul {
+    padding-right: 1rem;
+  }
+
+  header {
+    height: 110px;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* MAIN CONTENT STYLES */
+
+main {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  padding-top: 130px;
+}
+
+.main-content {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content h1 {
+  font-family: var(--PRIMARY_FONT);
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.main-content p {
+  font-family: var(--DESCRIPTION_FONT);
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+.main-content #free-demo {
+  width: 180px;
+  height: 55px;
+  border-radius: 30px;
+}
+
+section.interlude {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0.5;
+}
+
+section.interlude div {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--MAIN-BG-COLOR-BLACK);
+}
+
+.cta figure {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cta figure div img {
+  width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.cta figure figcaption {
+  font-family: var(--PRIMARY_FONT);
+}
+
+.cta figure figcaption form {
+  margin-top: 0.5rem;
+}
+
+.cta figure figcaption form {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.cta figure figcaption form input {
+  border: 1px solid;
+  border-radius: 5px;
+  height: 40px;
+  width: 300px;
+  padding: 0 0.5rem;
+  font-family: var(--DESCRIPTION_FONT);
+}
+
+.cta figure figcaption form button {
+  height: 40px;
+  width: 140px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 850px) {
+  .main-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-content p {
+    font-size: 1.4rem;
+  }
+
+  .main-content #free-demo {
+    width: 170px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .main-content p {
+    font-size: 1.2rem;
+  }
+
+  .main-content #free-demo {
+    width: 140px;
+    height: 50px;
+    font-size: 0.8rem;
+  }
+
+  section.interlude {
+    gap: 0.5rem;
+  }
+
+  section.interlude div {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .cta figure div img {
+    width: 350px;
+  }
+
+  .cta figure figcaption {
+    width: 350px;
+  }
+
+  .cta figure figcaption form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .cta figure div {
+    display: grid;
+    place-content: center;
+    width: 100%;
+  }
+
+  .cta figure div img {
+    width: 90vw;
+  }
+
+  .cta figure figcaption {
+    width: 90%;
+  }
+
+  .cta figure figcaption form input {
+    width: 250px;
+  }
+}
