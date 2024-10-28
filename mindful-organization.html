@@ -7,7 +7,6 @@
     <meta name="title" content="JFKD" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/mindful.css" />
-
     <meta name="autor" content="JFKD Web Agency" />
     <meta
       name="description"
@@ -19,8 +18,20 @@
       href="images/favicon.jpeg"
       aria-label="JFKD company logo"
     />
+    <script defer src="js/mindful.js"></script>
   </head>
   <body>
+    <!-- SIGN UP CONFIRMATION POPUP -->
+
+    <section class="popup-bg">
+      <div class="confirmation">
+        <h3>Thank You :)</h3>
+        <p>We will let you know of our latest through email.</p>
+        <button>Ok</button>
+      </div>
+      <div class="loading"></div>
+    </section>
+
     <!-- NAVIGATION -->
 
     <header>
@@ -55,16 +66,14 @@
           </div>
           <figcaption>
             Sign Up so we can let you know when our software drops!
-            <form action="">
-              <label for="email">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email Address"
-                />
-              </label>
-              <button id="free-demo">Sign Up</button>
+            <form id="email-form" method="post">
+              <input
+                type="email"
+                id="Email"
+                name="Email"
+                placeholder="Email Address"
+              />
+              <button type="submit" id="free-demo">Sign Up</button>
             </form>
           </figcaption>
         </figure>
