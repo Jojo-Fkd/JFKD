@@ -24,8 +24,9 @@ form.addEventListener("submit", (e) => {
         loading.classList.remove("active");
         popupBg.classList.add("active");
         confirmationPopup.classList.add("active");
-        confirmationPopup.querySelector("h3").textContent = "Sorry:( Try Again";
-        confirmationPopup.querySelector("p").textContent = "";
+        confirmationPopup.querySelector("h3").textContent = "Sorry, Try Again";
+        confirmationPopup.querySelector("p").textContent =
+          "Might be due to poor conncetion";
         confirmationPopup.querySelector("button").textContent = "Try Again";
         confirmationPopup.querySelector("button").onclick = () => {
           submit();
